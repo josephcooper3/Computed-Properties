@@ -13,7 +13,6 @@
     <header>
       <h1>Bank of CodeClan</h1>
       <h2>Total deposits: £ {{ totalBalances }}</h2>
-      <p>Total Deposits ☝️ should update dynamically when we add a new account.</p>
     </header>
 
     <form v-on:submit.prevent="saveAccount">
@@ -23,7 +22,8 @@
       <input type="submit">Add Account</button>
     </form>
 
-    <section>
+    <section id="filterInput">
+      <h3>Show Only Accounts with Balance Greater Than:</h3>
       <input type="number" v-model="filterAmount">
     </section>
 
