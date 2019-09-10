@@ -13,15 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
       newAccount: {
         name: "",
         balance: 0
-      }
+      },
+      filterAmount: 0
     },
     computed: {
       totalBalances: function () {
         return this.accounts.reduce((accumulator, account) => accumulator + account.balance, 0)
       },
-      // filteredAccounts: function (minAmount) {
-      //   return this.accounts.every((account) => account.balance > minAmount)
-      // }
+      filteredAccounts: function () {
+        return this.accounts.filter((account) => account.balance > this.filterAmount)
+      }
     },
     methods: {
       saveAccount: function(){
