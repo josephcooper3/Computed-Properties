@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     computed: {
       totalBalances: function () {
-        
+        let total = 0;
+        for (const account of this.accounts) {
+          total += account.balance;
+        }
+        return total;
       }
     },
     methods: {
