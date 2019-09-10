@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
     computed: {
       totalBalances: function () {
         return this.accounts.reduce((accumulator, account) => accumulator + account.balance, 0)
-      }
+      },
+      // filteredAccounts: function (minAmount) {
+      //   return this.accounts.every((account) => account.balance > minAmount)
+      // }
     },
     methods: {
       saveAccount: function(){
