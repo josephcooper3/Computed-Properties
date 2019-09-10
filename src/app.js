@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
         balance: 0
       }
     },
+    computed: {
+      totalBalances: function () {
+        
+      }
+    },
     methods: {
       saveAccount: function(){
         this.accounts.unshift(this.newAccount);
