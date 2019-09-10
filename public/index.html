@@ -12,7 +12,8 @@
   <div id="app">
     <header>
       <h1>Bank of CodeClan</h1>
-      <h2>Total deposits: £ {{ totalBalances }}</h2>
+      <h2>Total deposits of All Accounts: £ {{ totalBalances }}</h2>
+      <h3>Total deposits of Accounts Displayed: £ {{ totalFilteredBalances }}</h3>
     </header>
 
     <form v-on:submit.prevent="saveAccount">

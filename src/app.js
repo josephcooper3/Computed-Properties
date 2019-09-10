@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       filteredAccounts: function () {
         return this.accounts.filter((account) => account.balance > this.filterAmount)
-      }
+      },
+      totalFilteredBalances: function () {
+        return this.filteredAccounts.reduce((accumulator, account) => accumulator + account.balance, 0)
+      },
     },
     methods: {
       saveAccount: function(){
