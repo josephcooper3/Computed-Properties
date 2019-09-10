@@ -17,11 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     computed: {
       totalBalances: function () {
-        let total = 0;
-        for (const account of this.accounts) {
-          total += account.balance;
-        }
-        return total;
+        return this.accounts.reduce((accumulator, account) => accumulator + account.balance, 0)
       }
     },
     methods: {
