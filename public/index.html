@@ -28,7 +28,7 @@
     </section>
 
     <section>
-      <div class="account" v-for="account in accounts">
+      <div class="account" v-for="account in filteredAccounts">
         <h2>{{ account.name }}</h2>
         <p>Balance: £{{ account.balance }}</p>
       </div>
